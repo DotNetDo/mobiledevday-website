@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+.speaker-wrap{
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    .text {
+        h2 a {
+            font-size: .93em;
+        }
+        p {
+            line-height: 1.5;
+        }
+    }
+    &:after {
+        opacity: 1;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        width: 0;
+        content: '';
+        height: 0;
+        margin: 0 auto;
+        border-style: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: #6b76ff transparent transparent transparent;
+    }
+    &:last-child {
+        &:after {
+            opacity: 0;
+        }
+    }
+}
+.break-wrap {
+    width: 250px;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    .text {
+        padding: 0 !important;
+        width: 100%;
+    }
+}
+
+.sponsors{
+    .sponsor {
+        &:hover {
+            transform: scale(1.05);
+            transition: all 0.2s ease-in;
+        }
+        text-align: center;
+        padding: 35px 20px;
+        background: #fff;
+        transition: all 0.2s ease-in;
+        transform: scale(1);
+        position: relative;
+        height: 250px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.14);
+        img {
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+@media (max-width: 991.98px) {
+    .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+        color: white;
+    }
+    .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+        color: #999;
+    }
+    .ftco-search .nav-pills .nav-link {
+        color: black;
+    }
+}
+@media (max-width: 767.98px) {
+    .ftco-search .nav-pills .nav-link {
+        flex: 1;
+    }
+    .speaker-wrap {
+        .speaker-img {
+            width: 100px;
+            height: 100px;
+        }
+        .text {
+            padding-left: 10px;
+            h2 {
+                font-size: 20px;
+            }
+            p, span{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+    -ms-touch-action: auto;
+        touch-action: auto;
+}

@@ -1,0 +1,491 @@
+<nav class="navbar navbar-expand-lg  ftco_navbar  ftco-navbar-light"
+     id="ftco-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand"
+           href="javascript:void(0)"
+           [ngx-scroll-to]="'#home'">
+            <img src="assets/images/logo.png"
+                 width="45" />
+            Mobile <span>Developer</span> Day
+        </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#ftco-nav"
+                aria-controls="ftco-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span>
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a href="javascript:void(0)"
+                       [ngx-scroll-to]="'#home'"
+                       class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0)"
+                       [ngx-scroll-to-offset]="-80"
+                       [ngx-scroll-to]="'#info'"
+                       class="nav-link">Información</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0)"
+                       [ngx-scroll-to-offset]="-80"
+                       [ngx-scroll-to]="'#speakers'"
+                       class="nav-link">Speakers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0)"
+                       [ngx-scroll-to]="'#schedule'"
+                       [ngx-scroll-to-offset]="-80"
+                       class="nav-link">Horario</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0)"
+                       [ngx-scroll-to-offset]="-80"
+                       [ngx-scroll-to]="'#organizers'"
+                       class="nav-link">Organizadores</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0)"
+                       [ngx-scroll-to-offset]="-80"
+                       [ngx-scroll-to]="'#sponsors'"
+                       class="nav-link">Sponsors</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="hero-wrap "
+     id="home"
+     scrollSpyElement="home"
+     style=" height: 650px;">
+    <!-- <div class="overlay"></div> -->
+    <div class="container"
+         style="height:100%;">
+        <div class="row no-gutters slider-text  align-items-center justify-content-start ftco-animate"
+             style="height:100%;">
+            <div class="col-xl-10 "
+                 data-scrollax=" properties: { translateY: '70%' }">
+                <h1 class="mb-4"
+                    data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"> Mobile <span>Developer
+                    </span>Day 2020 </h1>
+                <p class="mb-4"
+                   data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Febrero 29 2020, Monte Plata,
+                    Republica Dominicana.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSftNn_COTo7kkN8mzf4z-Um61TaWdMqpck_sdA2RClsL8OlhQ/viewform?usp=send_form"
+                       class="btn btn-primary mb-3"
+                       target="_blank">Registrate aqui</a>
+                <div id="timer"
+                     class="d-flex mb-3">
+                    <div class="time"
+                         id="days"></div>
+                    <div class="time pl-4"
+                         id="hours"></div>
+                    <div class="time pl-4"
+                         id="minutes"></div>
+                    <div class="time pl-4"
+                         id="seconds"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-counter img bg-light "
+         scrollSpyElement="info"
+         id="section-counter"
+         id="info">
+    <div class="container-fluid">
+        <div class="row d-flex">
+            <div class="col-md-6 d-flex">
+                <div class="img d-flex align-self-stretch"
+                     style="background-image:url(assets/images/baner.png);"></div>
+            </div>
+            <div class="col-md-6 pl-md-5 py-5">
+                <div class="row justify-content-start pb-3  ftco-animate">
+                    <div class="col-md-12 heading-section ">
+                        <h2 class="mb-4"
+                            style="font-size: 37px"><span>Mobile </span> Developer <span>Day</span></h2>
+                        <p>Mobile dev day es un evento enfocado en tecnologías móviles (Xamarin, Kotlin, Swift, etc..),
+                            cuyo objetivo es mostrar las tecnologías en tendencia así mismo como las mejores practicas.
+                            <br />
+                            <br />
+                            El alcance del evento es poder llegar a las diferentes provincias del pais.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 justify-content-center counter-wrap ">
+                        <div class="block-18 text-center py-4 bg-light mb-4 ftco-animate">
+                            <div class="text">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="flaticon-guest"></span>
+                                </div>
+                                <strong class="number"
+                                        data-number="8">8</strong>
+                                <span>Speakers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center py-4 bg-light mb-4">
+                            <div class="text">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="flaticon-handshake"></span>
+                                </div>
+                                <strong class="number"
+                                        data-number="2">2</strong>
+                                <span>Sponsor</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center py-4 bg-light mb-4">
+                            <div class="text">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="flaticon-idea"></span>
+                                </div>
+                                <strong class="number"
+                                        data-number="20">20</strong>
+                                <span>Topics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section services-section bg-light pt-4 pb-0">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-3 d-flex align-self-stretch ">
+                <div class="media block-6 services d-block ftco-animate">
+                    <div class="icon"><span class="flaticon-placeholder"></span></div>
+                    <div class="media-body ">
+                        <h3 class="heading mb-3">Lugar</h3>
+                        <p> Salón del ayuntamiento de la provincia de Monte Planta, Republica Dominicana.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-self-stretch ">
+                <div class="media block-6 services d-block ftco-animate">
+                    <div class="icon"><span class="flaticon-world"></span></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">Transport</h3>
+                        <p>A small river named Duden flows by their place and supplies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-self-stretch ">
+                <div class="media block-6 services d-block ftco-animate">
+                    <div class="icon"><span class="flaticon-hotel"></span></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">Hotel</h3>
+                        <p>A small river named Duden flows by their place and supplies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-self-stretch ">
+                <div class="media block-6 services d-block ftco-animate">
+                    <div class="icon"><span class="flaticon-cooking"></span></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">Restaurant</h3>
+                        <p>A small river named Duden flows by their place and supplies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="ftco-section"
+         id="speakers">
+    <div class="container">
+        <div class="row justify-content-center mb-2 pb-1">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h2 class="mb-4"><span>Nuestros</span> Speakers</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="carousel-speakers owl-carousel ftco-animate">
+                    <div class="item"
+                         *ngFor="let item of speakers">
+                        <div class="speaker">
+                            <div style="width: 300px;height: 300px; display: flex;align-content: center; margin: auto;">
+                                <img [src]="item.photo"
+                                     class="img-fluid"
+                                     style="margin: auto;"
+                                     width="300">
+                            </div>
+                            <div class="text text-center py-3">
+                                <h3>{{item.name}}</h3>
+                                <span class="position">Web Developer</span>
+                                <ul class="ftco-social mt-3">
+                                    <li class=""><a href="#"><span class="icon-twitter"></span></a></li>
+                                    <li class=""><a href="#"><span class="icon-facebook"></span></a></li>
+                                    <li class=""><a href="#"><span class="icon-instagram"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section bg-light"
+         scrollSpyElement="schedule"
+         id="schedule">
+    <div class="container">
+        <div class="row justify-content-center mb-2 pb-1">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h2 class="mb-4"><span>Horario</span> del Evento</h2>
+            </div>
+        </div>
+        <div class="ftco-search ftco-animate">
+            <div class="row">
+                <div class="col-md-12 nav-link-wrap text-center ftco-animate">
+                    <div class="nav nav-pills d-flex justify-content-center"
+                         id="v-pills-tab"
+                         role="tablist"
+                         aria-orientation="vertical">
+                        <a class="nav-link active"
+                           id="v-pills-1-tab"
+                           data-toggle="pill"
+                           href="#v-pills-1"
+                           role="tab"
+                           aria-controls="v-pills-1"
+                           aria-selected="true">Track 1<span>29 Feb. 2020</span></a>
+                        <a class="nav-link"
+                           id="v-pills-2-tab"
+                           data-toggle="pill"
+                           href="#v-pills-2"
+                           role="tab"
+                           aria-controls="v-pills-2"
+                           aria-selected="true">Track 2<span>29 Feb. 2020</span></a>
+                    </div>
+                </div>
+                <div class="col-md-12 tab-wrap ftco-animate">
+                    <div class="tab-content"
+                         id="v-pills-tabContent">
+                        <div class="tab-pane fade show active"
+                             id="v-pills-1"
+                             role="tabpanel"
+                             aria-labelledby="day-1-tab">
+                            <ng-template ngFor
+                                         let-item
+                                         [ngForOf]="scheduleTrack1">
+                                <div class="speaker-wrap  d-flex"
+                                     [ngClass]="{'break-wrap': item.speaker == null}">
+                                    <div class="img speaker-img"
+                                         *ngIf="item.speaker != null"
+                                         [ngStyle]="{'background-image': 'url('+ item.speaker?.photo +')'}"></div>
+                                    <div class="text pl-md-5 pl-xs-2">
+                                        <span class="time">{{item.time}}</span>
+                                        <h2><a href="#">{{item.title}}</a></h2>
+                                        <p>{{item.description}}</p>
+                                        <!-- <h3 class="speaker-name">&mdash; <a href="#">{{Brett Morgan}}</a> <span
+                                                class="position">Founder of Wordpress</span></h3> -->
+                                    </div>
+                                </div>
+                            </ng-template>
+
+
+                        </div>
+                        <div class="tab-pane "
+                             id="v-pills-2"
+                             role="tabpanel"
+                             aria-labelledby="day-2-tab">
+                            <ng-template ngFor
+                                         let-item
+                                         [ngForOf]="scheduleTrack2">
+                                <div class="speaker-wrap  d-flex"
+                                     [ngClass]="{'break-wrap': item.speaker == null}">
+                                    <div class="img speaker-img"
+                                         *ngIf="item.speaker != null"
+                                         [ngStyle]="{'background-image': 'url('+ item.speaker?.photo +')'}"></div>
+                                    <div class="text pl-md-5 pl-xs-2">
+                                        <span class="time">{{item.time}}</span>
+                                        <h2><a href="#">{{item.title}}</a></h2>
+                                        <p>{{item.description}}</p>
+                                        <!-- <h3 class="speaker-name">&mdash; <a href="#">{{Brett Morgan}}</a> <span
+                                                class="position">Founder of Wordpress</span></h3> -->
+                                    </div>
+                                </div>
+                            </ng-template>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section py-4"
+         scrollSpyElement="organizers"
+         id="organizers">
+    <div class="container">
+        <div class="row justify-content-center mb-2 pb-1">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h2 class="mb-4"> Organizadores</h2>
+            </div>
+        </div>
+        <div class="row sponsors ftco-animate">
+            <a class="col-md-6 col-lg-4 col-sm-12 mb-4 "
+               *ngFor="let item of organizers"
+               style="border-radius: 50;">
+                <div class="sponsor">
+                    <img [src]="item.photo" />
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section py-4 bg-light"
+         id="sponsors">
+    <div class="container">
+        <div class="row justify-content-center mb-2 pb-1">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h2 class="mb-4"> Sponsors</h2>
+            </div>
+        </div>
+        <div class="row sponsors ftco-animate">
+            <div class="col-md-6 col-lg-4 col-sm-12 mb-4 "
+                 *ngFor="let item of sponsors">
+                <div class="sponsor">
+                    <img [src]="item.photo" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="ftco-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-2 pb-1">
+        <div class="col-md-7 heading-section text-center ">
+          <span class="subheading">Our Blog</span>
+          <h2><span>Recent</span> Blog</h2>
+        </div>
+      </div>
+      <div class="row d-flex">
+        <div class="col-md-4 d-flex ">
+          <div class="blog-entry justify-content-end">
+            <a href="blog-single.html" class="block-20" style="background-image: url('assets/images/image_1.jpg');">
+            </a>
+            <div class="text p-4 float-right d-block">
+              <div class="d-flex align-items-center pt-2 mb-4">
+                <div class="one">
+                  <span class="day">07</span>
+                </div>
+                <div class="two">
+                  <span class="yr">2019</span>
+                  <span class="mos">January</span>
+                </div>
+              </div>
+              <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ">
+          <div class="blog-entry justify-content-end">
+            <a href="blog-single.html" class="block-20" style="background-image: url('assets/images/image_2.jpg');">
+            </a>
+            <div class="text p-4 float-right d-block">
+              <div class="d-flex align-items-center pt-2 mb-4">
+                <div class="one">
+                  <span class="day">07</span>
+                </div>
+                <div class="two">
+                  <span class="yr">2019</span>
+                  <span class="mos">January</span>
+                </div>
+              </div>
+              <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ">
+          <div class="blog-entry">
+            <a href="blog-single.html" class="block-20" style="background-image: url('assets/images/image_3.jpg');">
+            </a>
+            <div class="text p-4 float-right d-block">
+              <div class="d-flex align-items-center pt-2 mb-4">
+                <div class="one">
+                  <span class="day">06</span>
+                </div>
+                <div class="two">
+                  <span class="yr">2019</span>
+                  <span class="mos">January</span>
+                </div>
+              </div>
+              <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+<!-- <section class="ftco-gallery">
+    <div class="container-wrap">
+        <div class="row no-gutters">
+            <div class="col-md-3 ">
+                <a href="assets/images/image_1.jpg"
+                   class="gallery image-popup img d-flex align-items-center"
+                   style="background-image: url(assets/images/image_1.jpg);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-instagram"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 ">
+                <a href="assets/images/image_2.jpg"
+                   class="gallery image-popup img d-flex align-items-center"
+                   style="background-image: url(assets/images/image_2.jpg);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-instagram"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 ">
+                <a href="assets/images/image_3.jpg"
+                   class="gallery image-popup img d-flex align-items-center"
+                   style="background-image: url(assets/images/image_3.jpg);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-instagram"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 ">
+                <a href="assets/images/image_4.jpg"
+                   class="gallery image-popup img d-flex align-items-center"
+                   style="background-image: url(assets/images/image_4.jpg);">
+                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                        <span class="icon-instagram"></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section> -->
