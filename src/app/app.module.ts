@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -17,6 +17,7 @@ import { ScrollSpyModule } from 'ngx-scrollspy';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     ScrollToModule.forRoot(),
     ScrollSpyModule.forRoot()
   ],

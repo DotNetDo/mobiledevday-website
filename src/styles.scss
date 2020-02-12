@@ -23,7 +23,7 @@
         margin: 0 auto;
         border-style: solid;
         border-width: 10px 10px 0 10px;
-        border-color: #6b76ff transparent transparent transparent;
+        border-color: #3498DB transparent transparent transparent;
     }
     &:last-child {
         &:after {
@@ -42,7 +42,9 @@
         width: 100%;
     }
 }
-
+.speaker.active >div h3{
+    color: #3498DB;
+}
 .sponsors{
     .sponsor {
         &:hover {
@@ -75,7 +77,7 @@
         color: #999;
     }
     .ftco-search .nav-pills .nav-link {
-        color: black;
+        color: #212121;
     }
 }
 @media (max-width: 767.98px) {
@@ -103,4 +105,44 @@
 .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
     -ms-touch-action: auto;
         touch-action: auto;
+}
+.item-hover {
+    transition: all 0.2s ease-in;
+    transform: scale(1);
+    &:hover {
+        transform: scale(1.08);
+        transition: all 0.2s ease-in;
+    }
+}
+
+.speaker-profile{
+    margin-top: 40px;
+    .profile-info {
+        img {
+            border-radius: 5px;
+        }
+        .name {
+            font-size: 20px;
+            color: #212121;
+            font-weight: 600;
+        }
+        .social {
+            list-style: none;
+            text-align: initial;
+            li {
+                display: inline-block;
+                margin:0 10px;
+
+            }
+        }
+    }
+    .profile-bio {
+        position: relative;
+        .btn{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        background: White;
+    }
 }

@@ -13,36 +13,50 @@ export let sponsors = [
 
 export let organizers = [
     {
+        name: "Charlin Agramonte",
+        photo: "assets/images/speakers/Charlin.png",
+        url: "https://www.instagram.com/gdgsantodomingo/"
+    },
+    {
+        name: "Rendy del Rosario",
+        photo: "assets/images/speakers/Rendy.jpeg",
+        url: "https://www.instagram.com/dotnetdo/"
+    },
+    {
+        name: "Edgar Garcia",
+        photo: "assets/images/speakers/EdgarGarcia.jpeg",
+        url: "https://www.instagram.com/dotnetdo/"
+    },
+    {
+        name: "Eury Perez Beltre",
+        photo: "assets/images/speakers/EuryPerez.jpeg",
+        url: "https://www.instagram.com/dotnetdo/"
+    },
+    {
+        name: " Luis Pujols",
+        photo: "assets/images/speakers/Luis.jpg",
+        url: "https://www.instagram.com/dotnetdo/"
+    }
+];
+
+export let help = [
+    {
         name: "GDG Santo Domingo",
-        photo: "assets/images/organizers/gdg.png",
+        photo: "assets/images/organizers/fb_profile_color.png",
         url: "https://www.instagram.com/gdgsantodomingo/"
     },
     {
         name: ".NET Dominicana",
-        photo: "assets/images/organizers/donet.jpg",
+        photo: "assets/images/organizers/DotNetDo-Black-Transp.png",
         url: "https://www.instagram.com/dotnetdo/"
     }
 ];
 
 export let speakers = [
     {
-        name: "Rendy Del Rosario",
-        photo: "assets/images/speakers/Rendy.jpeg",
-        twitterUrl: "",
-        facebookUrl: "",
-        instagramUrl: ""
-    },
-    {
-        name: "Charlin Agramonte",
-        photo: "assets/images/speakers/Charlin.jpeg",
-        twitterUrl: "",
-        facebookUrl: "",
-        instagramUrl: ""
-    },
-
-    {
         name: "Eury Perez",
         photo: "assets/images/speakers/EuryPerez.jpeg",
+        position: "Android Developer",
         twitterUrl: "",
         facebookUrl: "",
         instagramUrl: ""
@@ -50,6 +64,7 @@ export let speakers = [
     {
         name: "Stanley Lara",
         photo: "assets/images/speakers/StanleyLara.jpg",
+        position: "Developer",
         twitterUrl: "",
         facebookUrl: "https://www.facebook.com/stanley.lara",
         instagramUrl: ""
@@ -57,6 +72,7 @@ export let speakers = [
     {
         name: "Edgar Garcia",
         photo: "assets/images/speakers/EdgarGarcia.jpeg",
+        position: "Developer",
         twitterUrl: "",
         facebookUrl: "",
         instagramUrl: ""
@@ -64,6 +80,7 @@ export let speakers = [
     {
         name: "Juan Camacho",
         photo: "assets/images/speakers/JuanCamacho.jpg",
+        position: "Developer",
         twitterUrl: "",
         facebookUrl: "https://www.facebook.com/juan.camacho.505",
         instagramUrl: ""
@@ -71,6 +88,7 @@ export let speakers = [
     {
         name: "Ever Curiel",
         photo: "assets/images/speakers/EverCuriel.jpeg",
+        position: "Developer",
         twitterUrl: "",
         facebookUrl: "",
         instagramUrl: ""
@@ -78,6 +96,7 @@ export let speakers = [
     {
         name: "Giancarlos Castillo",
         photo: "assets/images/speakers/Giancarlos.jpeg",
+        position: "Developer",
         twitterUrl: "",
         facebookUrl: "",
         instagramUrl: ""
@@ -85,6 +104,23 @@ export let speakers = [
     {
         name: "Alice Perez",
         photo: "assets/images/speakers/Alice.jpg",
+        position: "Developer",
+        twitterUrl: "",
+        facebookUrl: "",
+        instagramUrl: ""
+    },
+    {
+        name: "Rendy Del Rosario",
+        photo: "assets/images/speakers/Rendy.jpeg",
+        position: "Xamarin Developer",
+        twitterUrl: "",
+        facebookUrl: "",
+        instagramUrl: ""
+    },
+    {
+        name: "Charlin Agramonte",
+        photo: "assets/images/speakers/Charlin.png",
+        position: "Xamarin Developer",
         twitterUrl: "",
         facebookUrl: "",
         instagramUrl: ""
@@ -235,7 +271,7 @@ export let scheduleTrack2 = [
         title: "Desarrollando Apps Multi-Plataformas Con Xamarin Forms",
         speaker: {
             name: "Charlin Agramonte",
-            photo: "assets/images/speakers/Charlin.jpeg",
+            photo: "assets/images/speakers/Charlin.ong",
         },
         time: "10:45 AM - 11:30 AM",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."

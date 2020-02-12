@@ -36,13 +36,13 @@
                     <a href="javascript:void(0)"
                        [ngx-scroll-to-offset]="-80"
                        [ngx-scroll-to]="'#speakers'"
-                       class="nav-link">Speakers</a>
+                       class="nav-link">Oradores</a>
                 </li>
                 <li class="nav-item">
                     <a href="javascript:void(0)"
                        [ngx-scroll-to]="'#schedule'"
                        [ngx-scroll-to-offset]="-80"
-                       class="nav-link">Horario</a>
+                       class="nav-link">Agenda</a>
                 </li>
                 <li class="nav-item">
                     <a href="javascript:void(0)"
@@ -54,7 +54,7 @@
                     <a href="javascript:void(0)"
                        [ngx-scroll-to-offset]="-80"
                        [ngx-scroll-to]="'#sponsors'"
-                       class="nav-link">Sponsors</a>
+                       class="nav-link">Patrocinadores</a>
                 </li>
 
 
@@ -113,11 +113,14 @@
                     <div class="col-md-12 heading-section ">
                         <h2 class="mb-4"
                             style="font-size: 37px"><span>Mobile </span> Developer <span>Day</span></h2>
-                        <p>Mobile dev day es un evento enfocado en tecnologías móviles (Xamarin, Kotlin, Swift, etc..),
+                        <p>Mobile dev day es un evento Gratis enfocado en tecnologías móviles (Xamarin, Kotlin, Swift, etc..),
                             cuyo objetivo es mostrar las tecnologías en tendencia así mismo como las mejores practicas.
                             <br />
                             <br />
                             El alcance del evento es poder llegar a las diferentes provincias del pais.
+                            <br />
+                            <br />
+                            No te pierdas el proximo sabado 29 de febrero 2020, la primera edición de este evento, a celebrarse en el Salón del ayuntamiento de la provincia de Monte Planta.
                         </p>
                     </div>
                 </div>
@@ -130,7 +133,7 @@
                                 </div>
                                 <strong class="number"
                                         data-number="8">8</strong>
-                                <span>Speakers</span>
+                                <span>Oradores</span>
                             </div>
                         </div>
                     </div>
@@ -142,7 +145,7 @@
                                 </div>
                                 <strong class="number"
                                         data-number="2">2</strong>
-                                <span>Sponsor</span>
+                                <span>Patrocinadores</span>
                             </div>
                         </div>
                     </div>
@@ -154,7 +157,7 @@
                                 </div>
                                 <strong class="number"
                                         data-number="20">20</strong>
-                                <span>Topics</span>
+                                <span>Temas</span>
                             </div>
                         </div>
                     </div>
@@ -163,49 +166,6 @@
         </div>
     </div>
 </section>
-<section class="ftco-section services-section bg-light pt-4 pb-0">
-    <div class="container">
-        <div class="row d-flex">
-            <div class="col-md-3 d-flex align-self-stretch ">
-                <div class="media block-6 services d-block ftco-animate">
-                    <div class="icon"><span class="flaticon-placeholder"></span></div>
-                    <div class="media-body ">
-                        <h3 class="heading mb-3">Lugar</h3>
-                        <p> Salón del ayuntamiento de la provincia de Monte Planta, Republica Dominicana.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex align-self-stretch ">
-                <div class="media block-6 services d-block ftco-animate">
-                    <div class="icon"><span class="flaticon-world"></span></div>
-                    <div class="media-body">
-                        <h3 class="heading mb-3">Transport</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex align-self-stretch ">
-                <div class="media block-6 services d-block ftco-animate">
-                    <div class="icon"><span class="flaticon-hotel"></span></div>
-                    <div class="media-body">
-                        <h3 class="heading mb-3">Hotel</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex align-self-stretch ">
-                <div class="media block-6 services d-block ftco-animate">
-                    <div class="icon"><span class="flaticon-cooking"></span></div>
-                    <div class="media-body">
-                        <h3 class="heading mb-3">Restaurant</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 
 
 <section class="ftco-section"
@@ -213,7 +173,7 @@
     <div class="container">
         <div class="row justify-content-center mb-2 pb-1">
             <div class="col-md-7 text-center heading-section ftco-animate">
-                <h2 class="mb-4"><span>Nuestros</span> Speakers</h2>
+                <h2 class="mb-4"><span>Nuestros</span> Oradores</h2>
             </div>
         </div>
         <div class="row">
@@ -221,7 +181,10 @@
                 <div class="carousel-speakers owl-carousel ftco-animate">
                     <div class="item"
                          *ngFor="let item of speakers">
-                        <div class="speaker">
+                        <div class="speaker" 
+                             [ngClass]="{'active': item.name == speaker.name}"
+                             style="cursor: pointer;"
+                             (click)="toggleSpeakerDetail(item)">
                             <div style="width: 300px;height: 300px; display: flex;align-content: center; margin: auto;">
                                 <img [src]="item.photo"
                                      class="img-fluid"
@@ -230,14 +193,29 @@
                             </div>
                             <div class="text text-center py-3">
                                 <h3>{{item.name}}</h3>
-                                <span class="position">Web Developer</span>
-                                <ul class="ftco-social mt-3">
-                                    <li class=""><a href="#"><span class="icon-twitter"></span></a></li>
-                                    <li class=""><a href="#"><span class="icon-facebook"></span></a></li>
-                                    <li class=""><a href="#"><span class="icon-instagram"></span></a></li>
-                                </ul>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="speaker-profile row" [@inOutAnimation] *ngIf="speaker.name">
+                    <div class="col-auto text-center profile-info pl-4">
+                        <div>
+                            <img [src]="speaker.photo"
+                             width="200"/>
+                        </div>
+                        <span class="name">{{speaker.name}}</span> <br/>
+                        <span class="subtitle">{{speaker.position}}</span>
+                        <ul class="social mt-3">
+                            <li class=""><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class=""><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li class=""><a href="#"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8 profile-bio">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur consequuntur impedit sapiente possimus, accusamus delectus. Adipisci tempore dolor quod tempora beatae recusandae quo omnis enim porro, culpa quibusdam sed rem. <br /> <br />
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ratione perferendis consectetur. Quam, earum vitae natus commodi enim quibusdam esse laborum sapiente odit distinctio sint quos suscipit. Necessitatibus, error dignissimos!
+                        </p>
+                        <button class="btn btn-light" (click)="speaker= {}">x</button>
                     </div>
                 </div>
             </div>
@@ -252,7 +230,7 @@
     <div class="container">
         <div class="row justify-content-center mb-2 pb-1">
             <div class="col-md-7 text-center heading-section ftco-animate">
-                <h2 class="mb-4"><span>Horario</span> del Evento</h2>
+                <h2 class="mb-4"><span>Agenda</span> del Evento</h2>
             </div>
         </div>
         <div class="ftco-search ftco-animate">
@@ -268,14 +246,14 @@
                            href="#v-pills-1"
                            role="tab"
                            aria-controls="v-pills-1"
-                           aria-selected="true">Track 1<span>29 Feb. 2020</span></a>
+                           aria-selected="true">Salón 1<span>29 Feb. 2020</span></a>
                         <a class="nav-link"
                            id="v-pills-2-tab"
                            data-toggle="pill"
                            href="#v-pills-2"
                            role="tab"
                            aria-controls="v-pills-2"
-                           aria-selected="true">Track 2<span>29 Feb. 2020</span></a>
+                           aria-selected="true">Salón 2<span>29 Feb. 2020</span></a>
                     </div>
                 </div>
                 <div class="col-md-12 tab-wrap ftco-animate">
@@ -321,8 +299,6 @@
                                         <span class="time">{{item.time}}</span>
                                         <h2><a href="#">{{item.title}}</a></h2>
                                         <p>{{item.description}}</p>
-                                        <!-- <h3 class="speaker-name">&mdash; <a href="#">{{Brett Morgan}}</a> <span
-                                                class="position">Founder of Wordpress</span></h3> -->
                                     </div>
                                 </div>
                             </ng-template>
@@ -337,23 +313,41 @@
 </section>
 
 
-<section class="ftco-section py-4"
+<section class="ftco-section py-5"
          scrollSpyElement="organizers"
          id="organizers">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center mb-2 pb-1">
             <div class="col-md-7 text-center heading-section ftco-animate">
                 <h2 class="mb-4"> Organizadores</h2>
             </div>
         </div>
-        <div class="row sponsors ftco-animate">
-            <a class="col-md-6 col-lg-4 col-sm-12 mb-4 "
+        <div class="row ftco-animate justify-content-center">
+            <div class="col-md-4 col-lg-2 col-sm-12 mb-4 text-center item-hover"
                *ngFor="let item of organizers"
-               style="border-radius: 50;">
-                <div class="sponsor">
-                    <img [src]="item.photo" />
+                >
+                <div style="height: 180px;">
+                    <img [src]="item.photo" 
+                        width="150"
+                        style="border-radius: 50%;"/>
                 </div>
-            </a>
+                <b class="text-center">{{item.name}}</b>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-12 text-center heading-section ftco-animate my-5">
+                <h2 class="mb-4" style="font-size: 20px;">Con la Ayuda de</h2>
+            </div>
+            <div class="row sponsors ftco-animate">
+                <a class="col-md-6 col-lg-4 col-sm-12 mb-4 "
+                    [href]="item.url"
+                    target="_blank"
+                     *ngFor="let item of help">
+                    <div class="sponsor ">
+                        <img [src]="item.photo" />
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -363,16 +357,18 @@
     <div class="container">
         <div class="row justify-content-center mb-2 pb-1">
             <div class="col-md-7 text-center heading-section ftco-animate">
-                <h2 class="mb-4"> Sponsors</h2>
+                <h2 class="mb-4"> Patrocinadores</h2>
             </div>
         </div>
         <div class="row sponsors ftco-animate">
-            <div class="col-md-6 col-lg-4 col-sm-12 mb-4 "
+            <a class="col-md-6 col-lg-4 col-sm-12 mb-4 "
+                [href]="item.url"
+                target="_blank"
                  *ngFor="let item of sponsors">
-                <div class="sponsor">
+                <div class="sponsor ">
                     <img [src]="item.photo" />
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </section>

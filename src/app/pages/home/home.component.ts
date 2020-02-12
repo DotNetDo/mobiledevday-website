@@ -1,39 +1,69 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { speakers, scheduleTrack1, scheduleTrack2, sponsors, organizers } from 'src/app/shared/data';
+import { speakers, scheduleTrack1, scheduleTrack2, sponsors, organizers, help } from 'src/app/shared/data';
+import { trigger, style, animate, transition } from '@angular/animations';
+
 declare var $: any;
 declare var AOS: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger(
+      'inOutAnimation', 
+      [
+        transition(
+          ':enter', 
+          [
+            style({ height: 0 }),
+            animate('.3s ease-out', 
+                    style({ height: 300 }))
+          ]
+        ),
+        transition(
+          ':leave', 
+          [
+            style({ height: 300}),
+            animate('.3s ease-in', 
+                    style({ height: 0}))
+          ]
+        )
+      ]
+    )
+  ],
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
   speakers: any[] = [];
+  speaker: any = {};
   scheduleTrack1: any[] = [];
   sponsors: any[] = [];
   scheduleTrack2: any[] = [];
   organizers: any[] = [];
+  help: any[] = [];
   constructor() {
     this.scheduleTrack1 = scheduleTrack1;
     this.scheduleTrack2 = scheduleTrack2;
     this.sponsors = sponsors;
     this.speakers = speakers;
     this.organizers = organizers;
+    this.help = help;
   }
 
   ngOnInit(): void {
 
   }
-
+  toggleSpeakerDetail(speaker) {
+    console.log(speaker);
+    this.speaker = speaker;
+  }
   ngAfterViewInit(): void {
-
     $("#days").html(0 + "<span>Days</span>");
     $("#hours").html(0 + "<span>Hours</span>");
     $("#minutes").html(0 + "<span>Minutes</span>");
     $("#seconds").html(0 + "<span>Seconds</span>");
     $('.carousel-speakers').owlCarousel({
-      autoplay: true,
+      autoplay: false,
       touchDrag: true,
       center: false,
       loop: false,
@@ -93,36 +123,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 		});
 	};
 	scrollWindow();
-    var isMobile = {
-      Android: function () {
-        return navigator.userAgent.match(/Android/i);
-      },
-      BlackBerry: function () {
-        return navigator.userAgent.match(/BlackBerry/i);
-      },
-      iOS: function () {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-      },
-      Opera: function () {
-        return navigator.userAgent.match(/Opera Mini/i);
-      },
-      Windows: function () {
-        return navigator.userAgent.match(/IEMobile/i);
-      },
-      any: function () {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-      }
-    };
 
-
-    $(window).stellar({
-      responsive: true,
-      parallaxBackgrounds: true,
-      parallaxElements: true,
-      horizontalScrolling: false,
-      hideDistantElements: false,
-      scrollProperty: 'scroll'
-    });
 
 
     var fullHeight = function () {
@@ -135,7 +136,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     };
     fullHeight();
 
-    $.Scrollax();
     $('nav .dropdown').hover(function () {
       var $this = $(this);
       // 	 timer;
@@ -159,27 +159,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
       duration: 800,
       easing: 'slide'
     });
-   
-    var isMobile = {
-      Android: function () {
-        return navigator.userAgent.match(/Android/i);
-      },
-      BlackBerry: function () {
-        return navigator.userAgent.match(/BlackBerry/i);
-      },
-      iOS: function () {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-      },
-      Opera: function () {
-        return navigator.userAgent.match(/Opera Mini/i);
-      },
-      Windows: function () {
-        return navigator.userAgent.match(/IEMobile/i);
-      },
-      any: function () {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-      }
-    };
 
     var counter = function () {
 
@@ -262,10 +241,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     if (minutes < "10") { minutes = "0" + minutes; }
     if (seconds < "10") { seconds = "0" + seconds; }
 
-    $("#days").html(days + "<span>Days</span>");
-    $("#hours").html(hours + "<span>Hours</span>");
-    $("#minutes").html(minutes + "<span>Minutes</span>");
-    $("#seconds").html(seconds + "<span>Seconds</span>");
+    $("#days").html(days + "<span>Días</span>");
+    $("#hours").html(hours + "<span>Horas</span>");
+    $("#minutes").html(minutes + "<span>Minutos</span>");
+    $("#seconds").html(seconds + "<span>Segundos</span>");
 
   }
 }
