@@ -193,6 +193,7 @@
                             </div>
                             <div class="text text-center py-3">
                                 <h3>{{item.name}}</h3>
+                                <span class="position">{{item.position}}</span>
                             </div>
                         </div>
                     </div>
@@ -206,14 +207,14 @@
                         <span class="name">{{speaker.name}}</span> <br/>
                         <span class="subtitle">{{speaker.position}}</span>
                         <ul class="social mt-3">
-                            <li class=""><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li class=""><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li class=""><a href="#"><span class="icon-instagram"></span></a></li>
+                            <li *ngIf="speaker.twitterUrl"><a [href]="speaker.twitterUrl"><span class="icon-twitter"></span></a></li>
+                            <li *ngIf="speaker.facebookUrl"><a [href]="speaker.facebookUrl"><span class="icon-facebook"></span></a></li>
+                            <li *ngIf="speaker.instagramUrl"><a [href]="speaker.instagramUrl"><span class="icon-instagram"></span></a></li>
+                            <li *ngIf="speaker.linkedinUrl"><a [href]="speaker.linkedinUrl"><span class="icon-linkedin"></span></a></li>
                         </ul>
                     </div>
                     <div class="col-md-8 profile-bio">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur consequuntur impedit sapiente possimus, accusamus delectus. Adipisci tempore dolor quod tempora beatae recusandae quo omnis enim porro, culpa quibusdam sed rem. <br /> <br />
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ratione perferendis consectetur. Quam, earum vitae natus commodi enim quibusdam esse laborum sapiente odit distinctio sint quos suscipit. Necessitatibus, error dignissimos!
+                        <p [innerHTML]="speaker.bio">
                         </p>
                         <button class="btn btn-light" (click)="speaker= {}">x</button>
                     </div>
@@ -230,7 +231,10 @@
     <div class="container">
         <div class="row justify-content-center mb-2 pb-1">
             <div class="col-md-7 text-center heading-section ftco-animate">
-                <h2 class="mb-4"><span>Agenda</span> del Evento</h2>
+                <h2 class="mb-4"><span>Agenda</span> del Evento
+                <br>
+                <span class="text-primary">29 Feb. 2020</span></h2>
+              
             </div>
         </div>
         <div class="ftco-search ftco-animate">
@@ -246,14 +250,14 @@
                            href="#v-pills-1"
                            role="tab"
                            aria-controls="v-pills-1"
-                           aria-selected="true">Salón 1<span>29 Feb. 2020</span></a>
+                           aria-selected="true">Salón 1</a>
                         <a class="nav-link"
                            id="v-pills-2-tab"
                            data-toggle="pill"
                            href="#v-pills-2"
                            role="tab"
                            aria-controls="v-pills-2"
-                           aria-selected="true">Salón 2<span>29 Feb. 2020</span></a>
+                           aria-selected="true">Salón 2</a>
                     </div>
                 </div>
                 <div class="col-md-12 tab-wrap ftco-animate">
@@ -274,9 +278,7 @@
                                     <div class="text pl-md-5 pl-xs-2">
                                         <span class="time">{{item.time}}</span>
                                         <h2><a href="#">{{item.title}}</a></h2>
-                                        <p>{{item.description}}</p>
-                                        <!-- <h3 class="speaker-name">&mdash; <a href="#">{{Brett Morgan}}</a> <span
-                                                class="position">Founder of Wordpress</span></h3> -->
+                                        <p [innerHtml]="item.description"></p>
                                     </div>
                                 </div>
                             </ng-template>
@@ -372,116 +374,3 @@
         </div>
     </div>
 </section>
-
-<!-- <section class="ftco-section bg-light">
-    <div class="container">
-      <div class="row justify-content-center mb-2 pb-1">
-        <div class="col-md-7 heading-section text-center ">
-          <span class="subheading">Our Blog</span>
-          <h2><span>Recent</span> Blog</h2>
-        </div>
-      </div>
-      <div class="row d-flex">
-        <div class="col-md-4 d-flex ">
-          <div class="blog-entry justify-content-end">
-            <a href="blog-single.html" class="block-20" style="background-image: url('assets/images/image_1.jpg');">
-            </a>
-            <div class="text p-4 float-right d-block">
-              <div class="d-flex align-items-center pt-2 mb-4">
-                <div class="one">
-                  <span class="day">07</span>
-                </div>
-                <div class="two">
-                  <span class="yr">2019</span>
-                  <span class="mos">January</span>
-                </div>
-              </div>
-              <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex ">
-          <div class="blog-entry justify-content-end">
-            <a href="blog-single.html" class="block-20" style="background-image: url('assets/images/image_2.jpg');">
-            </a>
-            <div class="text p-4 float-right d-block">
-              <div class="d-flex align-items-center pt-2 mb-4">
-                <div class="one">
-                  <span class="day">07</span>
-                </div>
-                <div class="two">
-                  <span class="yr">2019</span>
-                  <span class="mos">January</span>
-                </div>
-              </div>
-              <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex ">
-          <div class="blog-entry">
-            <a href="blog-single.html" class="block-20" style="background-image: url('assets/images/image_3.jpg');">
-            </a>
-            <div class="text p-4 float-right d-block">
-              <div class="d-flex align-items-center pt-2 mb-4">
-                <div class="one">
-                  <span class="day">06</span>
-                </div>
-                <div class="two">
-                  <span class="yr">2019</span>
-                  <span class="mos">January</span>
-                </div>
-              </div>
-              <h3 class="heading mt-2"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-<!-- <section class="ftco-gallery">
-    <div class="container-wrap">
-        <div class="row no-gutters">
-            <div class="col-md-3 ">
-                <a href="assets/images/image_1.jpg"
-                   class="gallery image-popup img d-flex align-items-center"
-                   style="background-image: url(assets/images/image_1.jpg);">
-                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                        <span class="icon-instagram"></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 ">
-                <a href="assets/images/image_2.jpg"
-                   class="gallery image-popup img d-flex align-items-center"
-                   style="background-image: url(assets/images/image_2.jpg);">
-                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                        <span class="icon-instagram"></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 ">
-                <a href="assets/images/image_3.jpg"
-                   class="gallery image-popup img d-flex align-items-center"
-                   style="background-image: url(assets/images/image_3.jpg);">
-                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                        <span class="icon-instagram"></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 ">
-                <a href="assets/images/image_4.jpg"
-                   class="gallery image-popup img d-flex align-items-center"
-                   style="background-image: url(assets/images/image_4.jpg);">
-                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                        <span class="icon-instagram"></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section> -->
