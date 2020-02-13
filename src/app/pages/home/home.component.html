@@ -199,7 +199,7 @@
                     </div>
                 </div>
                 <div class="speaker-profile row" [@inOutAnimation] *ngIf="speaker.name">
-                    <div class="col-auto text-center profile-info pl-4">
+                    <div class="col text-center profile-info pl-4">
                         <div>
                             <img [src]="speaker.photo"
                              width="200"/>
@@ -213,7 +213,7 @@
                             <li *ngIf="speaker.linkedinUrl"><a [href]="speaker.linkedinUrl"><span class="icon-linkedin"></span></a></li>
                         </ul>
                     </div>
-                    <div class="col-md-8 profile-bio">
+                    <div class="col-lg-8 profile-bio">
                         <p [innerHTML]="speaker.bio">
                         </p>
                         <button class="btn btn-light" (click)="speaker= {}">x</button>
@@ -340,7 +340,7 @@
             <div class="col-md-12 text-center heading-section ftco-animate my-5">
                 <h2 class="mb-4" style="font-size: 20px;">Con la Ayuda de</h2>
             </div>
-            <div class="row sponsors ftco-animate">
+            <div class="row sponsors ftco-animate justify-content-center">
                 <a class="col-md-6 col-lg-4 col-sm-12 mb-4 "
                     [href]="item.url"
                     target="_blank"
@@ -362,7 +362,7 @@
                 <h2 class="mb-4"> Patrocinadores</h2>
             </div>
         </div>
-        <div class="row sponsors ftco-animate">
+        <div class="row sponsors ftco-animate  justify-content-center">
             <a class="col-md-6 col-lg-4 col-sm-12 mb-4 "
                 [href]="item.url"
                 target="_blank"

@@ -133,7 +133,7 @@ export let speakers = [
     {
         name: "Rendy Del Rosario",
         photo: "assets/images/speakers/Rendy.jpeg",
-        position: "Mobile developer/ Microsft MVP",
+        position: "Mobile developer/ Microsoft MVP",
         bio: "Co-Founder de la empresa Crossgeeks. Cuenta con más de 15 años de experiencia en el mundo de las aplicaciones móviles. Es Xamarin Certified Developer y en su tiempo libre co-organiza el comunidad .NET Dominicana y escribe en su blog xamboy.com",
         twitterUrl: "",
         facebookUrl: "",
@@ -142,7 +142,7 @@ export let speakers = [
     {
         name: "Charlin Agramonte",
         photo: "assets/images/speakers/Charlin.png",
-        position: "Mobile developer/ Microsft MVP",
+        position: "Mobile developer/ Microsoft MVP",
         bio: "Co-founder de la empresa Crossgeeks. Está en el mundo de Xamarin desde los inicios de Xamarin Forms en el 2014, también es Xamarin Certified Developer y Microsoft MVP. En su tiempo libre co-organiza la comunidad .NET Dominicana y escribe en su blog xamgirl.com",
         twitterUrl: "",
         facebookUrl: "",
@@ -356,7 +356,7 @@ export let scheduleTrack2 = [
             photo: "assets/images/black_logo.png",
         },
         time: "3:45 PM - 4:30 PM",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        description: ""
     },
     {
         title: "Cierre",
