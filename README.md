@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Clone the repo
 
 ```shell
-git clone https://github.com/bryanforbes/mobiledevday-website
+git clone https://github.com/DotNetDo/mobiledevday-website
 cd mobiledevday-website
 ```
 
